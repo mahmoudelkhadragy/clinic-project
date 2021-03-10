@@ -8,9 +8,27 @@ import { DoctorListComponent } from './components/doctor-list/doctor-list.compon
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+// Lotti-module
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory() {
+  return player;
+}
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent, DoctorListComponent, HeaderComponent, NavbarComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    DoctorListComponent,
+    HeaderComponent,
+    NavbarComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    LottieModule.forRoot({ player: playerFactory }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -5,3 +5,27 @@
   font-family: "Roboto";
   box-sizing: border-box;
 }
+
+.general-btn {
+  background: rgba(35, 179, 232, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(35, 179, 232, 1) 0%,
+    rgba(6, 115, 185, 1) 100%
+  );
+  text-transform: uppercase;
+  border-radius: 38px;
+  color: #fff;
+  padding: 15px;
+  width: auto;
+  font-size: 22px;
+  border: transparent solid 2px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border: #0673b9 solid 2px;
+    background: transparent;
+    color: rgba(6, 115, 185, 1);
+    font-weight: 500;
+  }
+}

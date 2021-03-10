@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  h1 {
+    font-size: 60px;
+    color: #0673b9;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .general-btn {
+    width: 50%;
+    margin-top: 20px;
+  }
+}

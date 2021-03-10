@@ -10,4 +10,13 @@
       stroke-width="3"
     />
   </svg>
+
+  <ng-lottie
+    [options]="options"
+    (animationCreated)="animationCreated($event)"
+    (loopComplete)="onLoopComplete()"
+  ></ng-lottie>
+
+  <button (click)="stop()">Stop</button>
+  <button (click)="play()">Play</button>
 </div>

@@ -1,6 +1,6 @@
 <div class="background"></div>
 <div class="Wrapper">
   <app-navbar></app-navbar>
-  <app-header></app-header>
-  <app-home></app-home>
+  <app-header *ngIf="JournyStarted" class="header"></app-header>
+  <app-home *ngIf="!JournyStarted"></app-home>
 </div>
