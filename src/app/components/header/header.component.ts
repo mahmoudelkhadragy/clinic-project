@@ -11,7 +11,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  startJourny() {
+  // when click startjourny button set localstorage item and set subject value
+  startJourny(): void {
     this.manageApp.setlocalStorage('started');
   }
 }
