@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ManageAppService } from './../../services/manage-app.service';
 
 @Component({
   selector: 'app-doctor-list',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctor-list.component.scss'],
 })
 export class DoctorListComponent implements OnInit {
-  constructor() {}
+  @In
+  constructor(private manageApp: ManageAppService) {}
 
   ngOnInit(): void {}
+
+  closeDoctorPopup(): void {
+    this.manageApp.openListOfDoctorsPopup('closed');
+  }
 }

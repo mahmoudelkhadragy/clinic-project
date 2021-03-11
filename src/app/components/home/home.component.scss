@@ -1,7 +1,95 @@
+// start take_number styles
+.take_number {
+  position: absolute;
+  right: 26%;
+  bottom: 44%;
+  display: flex;
+  flex-direction: column;
+  &__line {
+    transform: translate(80px, 25px);
+  }
+  &__button {
+    text-transform: capitalize;
+    position: relative;
+    top: 15px;
+    left: 30%;
+  }
+}
+
+// start see_our_doctors styles
+.see_our_doctors {
+  position: absolute;
+  right: 39%;
+  bottom: 40%;
+  display: flex;
+  flex-direction: column;
+  &__line {
+    transform: translate(80px, 25px);
+  }
+  &__button {
+    text-transform: capitalize;
+    position: relative;
+    top: 15px;
+  }
+}
+
+// start check_daily_schadule styles
+.check_daily_schadule {
+  position: absolute;
+  left: 25%;
+  bottom: 27%;
+  display: flex;
+  flex-direction: column;
+  &__line {
+    transform: translate(80px, 25px);
+  }
+  &__button {
+    text-transform: capitalize;
+    position: relative;
+    top: 15px;
+  }
+}
+
+// start enter_meeting_code styles
+.enter_meeting_code {
+  position: absolute;
+  left: 4%;
+  bottom: 10%;
+
+  display: flex;
+  flex-direction: column;
+  &__line {
+    transform: translate(80px, 25px);
+  }
+  &__button {
+    text-transform: capitalize;
+    width: 70%;
+    position: relative;
+    top: 15px;
+  }
+}
+
+// svg style
 .path {
   stroke-dasharray: 200;
   stroke-dashoffset: 0;
   animation: dash 1.5s linear alternate;
+}
+
+// lottie style
+ng-lottie {
+  z-index: 1111;
+  position: relative;
+  width: 150px;
+  // transform: translate3d(-26px, -18px, 0px);
+  display: block;
+}
+
+// nurse_img styles
+.nures_img {
+  position: absolute;
+  right: 18%;
+  bottom: 0%;
 }
 
 @keyframes dash {
@@ -13,10 +101,17 @@
   }
 }
 
-ng-lottie {
-  z-index: 5000;
-  position: relative;
-  width: 150px;
-  // transform: translate3d(-26px, -18px, 0px);
-  display: block;
+.list_of_doctors_popup {
+  position: absolute;
+  z-index: 2222;
+  padding: 10px;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 80vh;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

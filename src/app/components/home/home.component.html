@@ -1,6 +1,7 @@
-<p>home works!</p>
-<div class="large-header line-drawing-demo">
-  <svg>
+<!-- start take_number div -->
+<div class="take_number">
+  <button class="general-btn take_number__button">Take A Number</button>
+  <svg class="take_number__line">
     <path
       class="path"
       d="M-4523.481,745.374-4459.5,693.5V582.1"
@@ -10,13 +11,92 @@
       stroke-width="3"
     />
   </svg>
-
   <ng-lottie
     [options]="options"
     (animationCreated)="animationCreated($event)"
     (loopComplete)="onLoopComplete()"
   ></ng-lottie>
+</div>
+<!-- end take_number div -->
 
-  <!-- <button (click)="stop()">Stop</button> -->
-  <!-- <button (click)="play()">Play</button> -->
+<!-- start see_our_doctors div -->
+<div class="see_our_doctors">
+  <button
+    (click)="opendoctorsPopup()"
+    class="general-btn see_our_doctors__button"
+  >
+    See Our Doctors
+  </button>
+  <svg class="see_our_doctors__line">
+    <path
+      class="path"
+      d="M-4523.481,745.374-4459.5,693.5V582.1"
+      transform="translate(4523.796 -582.1)"
+      fill="transparent"
+      stroke="#0673b9"
+      stroke-width="3"
+    />
+  </svg>
+  <ng-lottie
+    [options]="options"
+    (animationCreated)="animationCreated($event)"
+    (loopComplete)="onLoopComplete()"
+  ></ng-lottie>
+</div>
+<!-- end see_our_doctors div -->
+
+<!-- start check_daily_schadule div -->
+<div class="check_daily_schadule">
+  <button class="general-btn check_daily_schadule__button">
+    Check Our Daily Schadule
+  </button>
+  <svg class="check_daily_schadule__line">
+    <path
+      class="path"
+      d="M-4523.481,745.374-4459.5,693.5V582.1"
+      transform="translate(4523.796 -582.1)"
+      fill="transparent"
+      stroke="#0673b9"
+      stroke-width="3"
+    />
+  </svg>
+  <ng-lottie
+    [options]="options"
+    (animationCreated)="animationCreated($event)"
+    (loopComplete)="onLoopComplete()"
+  ></ng-lottie>
+</div>
+<!-- end check_daily_schadule div -->
+
+<!-- start enter_meeting_code div -->
+<div class="enter_meeting_code">
+  <button class="general-btn enter_meeting_code__button">
+    Enter Your Meeting Code To Start The Appointment
+  </button>
+  <svg class="enter_meeting_code__line">
+    <path
+      class="path"
+      d="M-4523.481,745.374-4459.5,693.5V582.1"
+      transform="translate(4523.796 -582.1)"
+      fill="transparent"
+      stroke="#0673b9"
+      stroke-width="3"
+    />
+  </svg>
+  <ng-lottie
+    [options]="options"
+    (animationCreated)="animationCreated($event)"
+    (loopComplete)="onLoopComplete()"
+  ></ng-lottie>
+</div>
+<!-- end enter_meeting_code div -->
+
+<img
+  class="img-fluid nures_img"
+  src="assets/images/nurse.png"
+  alt="clinic nurse"
+/>
+
+<div class="list_of_doctors_popup" *ngIf="doctorsPopup === 'opened'">
+  <app-doctor-list></app-doctor-list>
 </div>
