@@ -98,11 +98,11 @@
 />
 
 <div
+  id="app-doctor-list"
   class="list_of_doctors_popup"
   *ngIf="doctorsPopup === 'opened'"
-  (click)="closeDoctorsPopup('closed')"
+  (click)="clickOutsideDoctorsList($event)"
 >
-  <!-- <div class="layout"></div> -->
   <app-doctor-list
     (closeListOfDoctorsPopup)="closeDoctorsPopup($event)"
     [listOfDoctorsPopupStatus]="doctorsPopup"

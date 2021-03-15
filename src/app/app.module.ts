@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 
+// material modules
+import { MatIconModule } from '@angular/material/icon';
+
+// RatingModule
+import { RatingModule } from 'ng-starrating';
+import { RatingComponent } from './shared/rating/rating.component';
+
 export function playerFactory() {
   return player;
 }
@@ -23,11 +31,15 @@ export function playerFactory() {
     DoctorListComponent,
     HeaderComponent,
     NavbarComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),
+    BrowserAnimationsModule,
+    MatIconModule,
+    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

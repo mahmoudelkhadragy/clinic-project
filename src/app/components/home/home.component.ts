@@ -1,7 +1,6 @@
 import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
-import { Subscription } from 'rxjs';
 import { ManageAppService } from './../../services/manage-app.service';
 
 @Component({
@@ -11,7 +10,7 @@ import { ManageAppService } from './../../services/manage-app.service';
 })
 export class HomeComponent implements OnInit {
   constructor(private ngZone: NgZone, private manageApp: ManageAppService) {}
-  doctorsPopup = 'closed';
+  doctorsPopup = 'opened';
 
   options: AnimationOptions = {
     path: '/assets/hotspot.json',
@@ -44,5 +43,12 @@ export class HomeComponent implements OnInit {
 
   closeDoctorsPopup(status: string): void {
     this.doctorsPopup = status;
+  }
+  clickOutsideDoctorsList(e: Event): void {
+    const doctorPopup = document.getElementById('app-doctor-list');
+    e.stopPropagation();
+    if (e.target === doctorPopup) {
+      this.closeDoctorsPopup('closed');
+    }
   }
 }
