@@ -6,7 +6,6 @@ import { Observable, Subject } from 'rxjs';
 })
 export class ManageAppService {
   journyEmitted = new Subject<string>();
-  listOfDoctorsPopup = new Subject<string>();
 
   constructor() {}
 
@@ -26,13 +25,6 @@ export class ManageAppService {
 
   // method to send subject value of obsevable
   recieveJournyValue(): Observable<string> {
-    return this.journyEmitted.asObservable();
-  }
-
-  openListOfDoctorsPopup(val: string): void {
-    this.listOfDoctorsPopup.next(val);
-  }
-  getListOfDoctorsPopupStatus(): Observable<string> {
     return this.journyEmitted.asObservable();
   }
 }

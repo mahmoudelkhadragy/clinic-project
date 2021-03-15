@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { ManageAppService } from './../../services/manage-app.service';
 
 @Component({
@@ -7,12 +7,13 @@ import { ManageAppService } from './../../services/manage-app.service';
   styleUrls: ['./doctor-list.component.scss'],
 })
 export class DoctorListComponent implements OnInit {
-  @In
+  @Input() listOfDoctorsPopupStatus = '';
+  @Output() closeListOfDoctorsPopup = new EventEmitter();
   constructor(private manageApp: ManageAppService) {}
 
   ngOnInit(): void {}
 
   closeDoctorPopup(): void {
-    this.manageApp.openListOfDoctorsPopup('closed');
+    this.closeListOfDoctorsPopup.emit('closed');
   }
 }

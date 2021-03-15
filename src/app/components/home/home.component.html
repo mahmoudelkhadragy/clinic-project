@@ -97,6 +97,14 @@
   alt="clinic nurse"
 />
 
-<div class="list_of_doctors_popup" *ngIf="doctorsPopup === 'opened'">
-  <app-doctor-list></app-doctor-list>
+<div
+  class="list_of_doctors_popup"
+  *ngIf="doctorsPopup === 'opened'"
+  (click)="closeDoctorsPopup('closed')"
+>
+  <!-- <div class="layout"></div> -->
+  <app-doctor-list
+    (closeListOfDoctorsPopup)="closeDoctorsPopup($event)"
+    [listOfDoctorsPopupStatus]="doctorsPopup"
+  ></app-doctor-list>
 </div>

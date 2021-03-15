@@ -41,4 +41,8 @@ export class HomeComponent implements OnInit {
   onLoopComplete(): void {
     this.ngZone.runOutsideAngular(() => this.animationItem[0].stop());
   }
+
+  closeDoctorsPopup(status: string): void {
+    this.doctorsPopup = status;
+  }
 }

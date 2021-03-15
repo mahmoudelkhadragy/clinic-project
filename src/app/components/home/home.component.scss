@@ -102,16 +102,24 @@ ng-lottie {
 }
 
 .list_of_doctors_popup {
-  position: absolute;
+  position: fixed;
   z-index: 2222;
   padding: 10px;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  width: 75%;
-  height: 80vh;
-  border-radius: 10px;
-  background-color: #fff;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+  // background-color: rgba(0,0,0,.1);
+
+  app-doctor-list{
+    display: block;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    height: 100%;
+    padding: 15px;
+    border-radius: 12px;
+  }
 }
+
