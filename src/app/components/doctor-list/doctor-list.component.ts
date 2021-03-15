@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { ManageAppService } from './../../services/manage-app.service';
+import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-doctor-list',

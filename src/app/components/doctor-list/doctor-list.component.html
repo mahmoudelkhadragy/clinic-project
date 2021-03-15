@@ -1,4 +1,43 @@
 <section class="list_of_doctors">
   <h2 class="general_h2">List Of Doctors</h2>
-  <span (click)="closeDoctorPopup()">X</span>
+  <mat-icon (click)="closeDoctorPopup()">close</mat-icon>
+
+  <div class="list_of_doctors__container">
+    <!-- start doctor_item  -->
+    <div class="list_of_doctors__item">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <!-- start doctor_info  -->
+          <div class="doctor_info">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="doctor_info_img">
+                  <img
+                    class="img-fluid"
+                    src="assets/images/doctor-img.png"
+                    alt="doctor image"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-md-6 d-flex align-items-center">
+                <div class="doctor_info_details">
+                  <h5>Doctor</h5>
+                  <h3>John Doe</h3>
+                  <p>Medicine Specialist</p>
+                  <app-rating [totalRate]="5" [rate]="4"></app-rating>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end doctor_info  -->
+        </div>
+
+        <!-- start schedual slider -->
+        <div class="col-12 col-md-8">
+          <div class="doctor_list_schedual"></div>
+        </div>
+      </div>
+    </div>
+    <!-- end doctor_item  -->
+  </div>
 </section>

@@ -1,1 +1,49 @@
+.list_of_doctors{
+  position: relative;
+  padding: 10px;
+  mat-icon{
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #989898;
+    transition: all .2s ease-in-out;
+    &:hover{
+      color: #0673B9;
+    }
+  }
+  &__container{
+    width: 80%;
+    margin: 40px auto 0 auto;
+  }
+}
 
+.list_of_doctors__item{
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #ccc;
+        box-shadow: 0 0 10px #ccc;
+}
+.doctor_info_details{
+  h5{
+    font-size: 14px;
+    font-weight: normal;
+    color: #1870CF;
+  }
+  h3{
+    font-size: 22px;
+    color: #1870CF;
+    font-weight: 500;
+  }
+  p{
+    font-size: 14px;
+    color: #989898;
+  }
+}
+.doctor_info{
+  img{
+    border-radius: 50%;
+  }
+}
