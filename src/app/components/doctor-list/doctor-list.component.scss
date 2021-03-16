@@ -1,6 +1,8 @@
+
 .list_of_doctors{
   position: relative;
-  padding: 10px;
+  overflow-y: scroll;
+  height: 100%;
   mat-icon{
     position: absolute;
     right: 40px;
@@ -19,9 +21,10 @@
   }
 }
 
+
 .list_of_doctors__item{
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 10px #ccc;
         box-shadow: 0 0 10px #ccc;
@@ -46,4 +49,50 @@
   img{
     border-radius: 50%;
   }
+}
+
+// schedual doctor
+.doctor_list_schedual{
+  position: relative;
+}
+.navigate{
+  position: absolute;
+  top: 48%;
+  background-color: #fff;
+  box-shadow: 0 0 5px #ccc;
+  padding: 6px 8px;
+  color: #0673B9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav-prev{
+  left: 0;
+}
+.nav-next{
+  right: 0;
+}
+.schedual{
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.schedual_day{
+  background-color: #0673B9;
+  color: #fff;
+  padding: 7px 0;
+  text-transform: capitalize;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.schedual_time{
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 6px 0;
+  p{
+    margin: 0;
+    padding: 5px 0;
+  }
+}
+.btn_book_appointment{
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }

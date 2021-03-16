@@ -9,6 +9,9 @@ import { DoctorListComponent } from './components/doctor-list/doctor-list.compon
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+// owl-carousel module
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 // Lotti-module
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
@@ -17,7 +20,6 @@ import player from 'lottie-web';
 import { MatIconModule } from '@angular/material/icon';
 
 // RatingModule
-import { RatingModule } from 'ng-starrating';
 import { RatingComponent } from './shared/rating/rating.component';
 
 export function playerFactory() {
@@ -39,7 +41,7 @@ export function playerFactory() {
     LottieModule.forRoot({ player: playerFactory }),
     BrowserAnimationsModule,
     MatIconModule,
-    RatingModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -4,8 +4,8 @@
 
   <div class="list_of_doctors__container">
     <!-- start doctor_item  -->
-    <div class="list_of_doctors__item">
-      <div class="row">
+    <div class="list_of_doctors__item" *ngFor="let doctor of doctors">
+      <div class="row d-flex align-items-center">
         <div class="col-12 col-md-4">
           <!-- start doctor_info  -->
           <div class="doctor_info">
@@ -22,9 +22,9 @@
               <div class="col-12 col-md-6 d-flex align-items-center">
                 <div class="doctor_info_details">
                   <h5>Doctor</h5>
-                  <h3>John Doe</h3>
-                  <p>Medicine Specialist</p>
-                  <app-rating [totalRate]="5" [rate]="4"></app-rating>
+                  <h3>{{ doctor.name }}</h3>
+                  <p>{{ doctor.spec }}</p>
+                  <app-rating [totalRate]="5" [rate]="doctor.rate"></app-rating>
                 </div>
               </div>
             </div>
@@ -34,10 +34,39 @@
 
         <!-- start schedual slider -->
         <div class="col-12 col-md-8">
-          <div class="doctor_list_schedual">list of schedual</div>
+          <div class="doctor_list_schedual px-5">
+            <owl-carousel-o [options]="customOptions" #OwlCar id="owls">
+              <ng-container *ngFor="let schedual of scheduals">
+                <ng-template carouselSlide [id]="schedual.id"
+                  ><div class="schedual text-center">
+                    <div class="schedual_day">{{ schedual.date }}</div>
+                    <div class="schedual_time">
+                      <p *ngFor="let time of schedual.times">{{ time }}</p>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn_book_appointment d-block w-100"
+                    >
+                      Book
+                    </button>
+                  </div>
+                </ng-template>
+              </ng-container>
+            </owl-carousel-o>
+            <span class="navigate nav-prev" (click)="OwlCar.prev()"
+              ><i class="fas fa-chevron-left fa-fw"></i
+            ></span>
+            <span class="navigate nav-next" (click)="OwlCar.next()"
+              ><i class="fas fa-chevron-right fa-fw"></i
+            ></span>
+          </div>
+          <div class="d-flex justify-content-center reserved">
+            <p class="py-2">Appointment resevation</p>
+          </div>
         </div>
       </div>
     </div>
+
     <!-- end doctor_item  -->
   </div>
 </section>
