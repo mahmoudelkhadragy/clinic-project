@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// general styles
+a:hover{
+  text-decoration: none;
+}
+
 .general-btn {
   background: rgba(35, 179, 232, 1);
   background: linear-gradient(
@@ -46,6 +55,3 @@
   bottom: -15px;
   left: 46%;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

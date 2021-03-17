@@ -51,7 +51,7 @@
   }
 }
 
-// schedual doctor
+// start schedual doctor style
 .doctor_list_schedual{
   position: relative;
 }
@@ -96,3 +96,12 @@
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+.reserved{
+  p{
+    margin-bottom: 0;
+    padding: 8px 0 0 0;
+    color: #989898;
+    text-transform: capitalize;
+  }
+}
+// start schedual doctor style

@@ -1,70 +1,183 @@
-.logo-img {
-  height: 112px;
+
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.zndx {
-  z-index: 1000;
-  margin-top: 20px;
-}
-
-.input-group {
-  width: 29vw;
-  border-radius: 38px;
-}
-
-.input-group > .input-group-prepend > .btn {
-  border-radius: 38px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.input-group > .form-control:not(:first-child) {
-  border-radius: 38px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-input {
-  border: none;
-  background: white;
-}
-
-button {
-  border: none;
-  background: white;
-  border-right: 1px #e2e2e2 solid;
-
-  &:hover {
-    background: rgba(6, 115, 185, 1);
+.logo{
+  display: flex;
+  justify-content: center;
+  img{
+    height: 112px;
   }
 }
 
-.custom-select.select {
-  border: none;
-  text-align: right;
-  color: #0673b9;
-  background: rgba(0, 0, 0, 0)
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-    right 0.75rem center/8px 10px no-repeat;
-
-  font-weight: 500;
-  &:focus {
+.book_nav_btn{
+  font-size: 16px;
+}
+.nav_search{
+  .nav_search_icon{
+    position: relative;
+    left: 45px;
+    color: #cecece;
+    border-right: 1px solid #E2E2E2;
+    padding: 5px 8px 5px 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &:hover{
+      color: #1870CF;
+    }
+  }
+  .search_input{
     border: none;
+    width: 450px;
+    padding: 8px 10px 8px 48px;
+    border-radius: 20px;
+    font-size: 17px;
+    &:focus{
+      border: none;
+      outline: none;
+    }
+    &:active{
+      border: none;
+      outline: none;
+    }
+  }
+}
+.select{
+  width: 80px;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right .75rem center/8px 10px no-repeat;
+  color: #0673B9;
+  border: none;
+  outline: none;
+  &:focus,
+  &:active{
     outline: none;
-    box-shadow: none;
+    border: none;
   }
+  .option{
+    color: #222;
+    padding: 5px 0;
+  }
+}
 
-  option {
-    background: transparent;
+.nav_controls{
+  span{
+    margin-right: 50px;
+    color: #EF0F0F;
+    border: 2px solid #EF0F0F;
+    padding: 8px 13px;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .book_nav_btn{
+    font-weight: normal;
+    padding: 9px 17px;
+    font-size: 17px;
+    margin-right: 25px;
+  }
+  .nav_link{
+    color: #0673B9;
+    font-size: 18px;
+    padding: 0 8px;
+    cursor: pointer;
+    border-right: 1px solid #fff;
   }
 }
 
-.navlink {
-  color: #0673b9;
-  font-weight: 500;
 
-  &:hover {
-    color: #ef0f0f;
-    text-decoration: none;
-  }
-}
+
+
+
+
+// .logo-img {
+//   height: 112px;
+// }
+
+// .zndx {
+//   z-index: 1000;
+//   margin-top: 20px;
+// }
+
+// .input-group {
+//   width: 29vw;
+//   border-radius: 38px;
+// }
+
+// .input-group > .input-group-prepend > .btn {
+//   border-radius: 38px;
+//   border-top-right-radius: 0;
+//   border-bottom-right-radius: 0;
+// }
+
+// .input-group > .form-control:not(:first-child) {
+//   border-radius: 38px;
+//   border-top-left-radius: 0;
+//   border-bottom-left-radius: 0;
+// }
+
+// input {
+//   border: none;
+//   background: white;
+// }
+
+// button {
+//   border: none;
+//   background: white;
+//   border-right: 1px #e2e2e2 solid;
+
+//   &:hover {
+//     background: rgba(6, 115, 185, 1);
+//   }
+// }
+
+// .custom-select.select {
+//   border: none;
+//   text-align: right;
+//   color: #0673b9;
+//   background: rgba(0, 0, 0, 0)
+//     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+//     right 0.75rem center/8px 10px no-repeat;
+
+//   font-weight: 500;
+//   &:focus {
+//     border: none;
+//     outline: none;
+//     box-shadow: none;
+//   }
+
+//   option {
+//     background: transparent;
+//   }
+// }
+
+// .navlink {
+//   color: #0673b9;
+//   font-weight: 500;
+
+//   &:hover {
+//     color: #ef0f0f;
+//     text-decoration: none;
+//   }
+// }
+
+// .book_nav_btn{
+//   text-decoration: none;
+//   &:hover{
+//     text-decoration: none;
+//     font-weight: normal;
+//   }
+// }
+
+// .controls_nav{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .select{
+//   width: 100px;
+// }

@@ -14,7 +14,7 @@ export class DoctorListComponent implements OnInit {
     stagePadding: 0,
     items: 8,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,

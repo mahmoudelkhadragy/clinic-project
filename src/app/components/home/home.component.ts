@@ -10,7 +10,7 @@ import { ManageAppService } from './../../services/manage-app.service';
 })
 export class HomeComponent implements OnInit {
   constructor(private ngZone: NgZone, private manageApp: ManageAppService) {}
-  doctorsPopup = 'opened';
+  doctorsPopup = 'closed';
 
   options: AnimationOptions = {
     path: '/assets/hotspot.json',
