@@ -1,0 +1,126 @@
+
+.list_of_doctors{
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+  mat-icon{
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #989898;
+    transition: all .2s ease-in-out;
+    &:hover{
+      color: #0673B9;
+    }
+  }
+  &__container{
+    width: 80%;
+    margin: 30px auto 0 auto;
+  }
+}
+
+
+.list_of_doctors__item{
+  padding: 20px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #ccc;
+        box-shadow: 0 0 10px #ccc;
+}
+.doctor_info_details{
+  h5{
+    font-size: 14px;
+    font-weight: normal;
+    color: #1870CF;
+  }
+  h3{
+    font-size: 22px;
+    color: #1870CF;
+    font-weight: 500;
+  }
+  p{
+    font-size: 14px;
+    color: #989898;
+  }
+}
+.doctor_info{
+  img{
+    border-radius: 50%;
+  }
+}
+
+// start schedual doctor style
+.doctor_list_schedual{
+  position: relative;
+}
+.navigate{
+  position: absolute;
+  top: 48%;
+  background-color: #fff;
+  box-shadow: 0 0 5px #ccc;
+  padding: 6px 8px;
+  color: #0673B9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav-prev{
+  left: 0;
+}
+.nav-next{
+  right: 0;
+}
+.schedual{
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.schedual_day{
+  background-color: #0673B9;
+  color: #fff;
+  padding: 7px 0;
+  text-transform: capitalize;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.schedual_time{
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 6px 0;
+  p{
+    margin: 0;
+    padding: 5px 0;
+  }
+}
+.btn_book_appointment{
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.reserved{
+  p{
+    margin-bottom: 0;
+    padding: 8px 0 0 0;
+    color: #989898;
+    text-transform: capitalize;
+  }
+}
+// end schedual doctor style
+
+
+// daily schadule
+.today_date{
+  color: #0673b9;
+  font-size: 28px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.today_date:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 146px;
+  border-radius: 3px;
+  background: #0673b9;
+}

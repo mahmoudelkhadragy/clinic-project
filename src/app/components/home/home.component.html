@@ -47,7 +47,10 @@
 
 <!-- start check_daily_schadule div -->
 <div class="check_daily_schadule">
-  <button class="general-btn check_daily_schadule__button">
+  <button
+    class="general-btn check_daily_schadule__button"
+    (click)="openDailySchadulePopup()"
+  >
     Check Our Daily Schadule
   </button>
   <svg class="check_daily_schadule__line">
@@ -99,7 +102,7 @@
 
 <div
   id="app-doctor-list"
-  class="list_of_doctors_popup"
+  class="popup"
   *ngIf="doctorsPopup === 'opened'"
   (click)="clickOutsideDoctorsList($event)"
 >
@@ -107,4 +110,15 @@
     (closeListOfDoctorsPopup)="closeDoctorsPopup($event)"
     [listOfDoctorsPopupStatus]="doctorsPopup"
   ></app-doctor-list>
+</div>
+<div
+  id="daily-schadule"
+  class="popup"
+  *ngIf="dailySchadule === 'opened'"
+  (click)="clickOutsideDailySchadule($event)"
+>
+  <app-daily-schadule
+    (closeDailySchadulePopup)="closeDailySchedual($event)"
+    [dailySchaduleStatus]="dailySchadule"
+  ></app-daily-schadule>
 </div>

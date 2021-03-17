@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 // RatingModule
 import { RatingComponent } from './shared/rating/rating.component';
+import { DailySchaduleComponent } from './components/daily-schadule/daily-schadule.component';
 
 export function playerFactory() {
   return player;
@@ -34,6 +35,7 @@ export function playerFactory() {
     HeaderComponent,
     NavbarComponent,
     RatingComponent,
+    DailySchaduleComponent,
   ],
   imports: [
     BrowserModule,

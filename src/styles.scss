@@ -30,12 +30,12 @@ a:hover{
   font-size: 22px;
   border: rgba(35, 179, 232, 1) solid 2px;
   transition: all 0.2s ease-in-out;
+  font-weight: 500;
 
   &:hover {
     border: #0673b9 solid 2px;
     background: transparent;
     color: rgba(6, 115, 185, 1);
-    font-weight: 500;
   }
 }
 

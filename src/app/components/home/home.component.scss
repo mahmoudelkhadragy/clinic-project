@@ -90,6 +90,7 @@ ng-lottie {
   position: absolute;
   right: 18%;
   bottom: 0%;
+  height: 500px;
 }
 
 @keyframes dash {
@@ -101,7 +102,7 @@ ng-lottie {
   }
 }
 
-.list_of_doctors_popup {
+.popup {
   position: fixed;
   z-index: 2222;
   padding: 15px 10px 20px 0;
@@ -111,7 +112,8 @@ ng-lottie {
   height: calc(100vh - 120px);
   overflow: hidden;
 
-  app-doctor-list{
+  app-doctor-list,
+  app-daily-schadule{
     display: block;
     width: 80%;
     margin: auto;
